@@ -1,4 +1,4 @@
 # Basic Genetic Algorithm
 
 ## Usage
-	- `go run ./cmd/life`
+	go run ./cmd/life
