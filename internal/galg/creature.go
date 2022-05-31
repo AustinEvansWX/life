@@ -1,4 +1,4 @@
-package neat
+package galg
 
 type Creature struct {
 	Position float64

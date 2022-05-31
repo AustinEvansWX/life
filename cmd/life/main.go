@@ -2,8 +2,8 @@ package main
 
 import (
 	"image"
+	"life/internal/galg"
 	"life/internal/logger"
-	"life/internal/neat"
 	"life/internal/renderer"
 	"life/internal/utils"
 	"math/rand"
@@ -13,14 +13,14 @@ import (
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	population := neat.Population{
+	population := galg.Population{
 		PopulationSize:  200,
 		GenomeSize:      32,
 		GenerationSteps: 100,
 		Goal:            utils.RandFloat(0.0, 1.0),
 		//Goal:         0.85,
 		MutationRate: 0.03,
-		Network: neat.Network{
+		Network: galg.Network{
 			Input:    1,
 			Internal: 6,
 			Output:   2,

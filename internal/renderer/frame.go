@@ -3,12 +3,12 @@ package renderer
 import (
 	"image"
 	"image/color"
-	"life/internal/neat"
+	"life/internal/galg"
 	"life/internal/utils"
 	"math"
 )
 
-func CreateFrame(population neat.Population) *image.Paletted {
+func CreateFrame(population galg.Population) *image.Paletted {
 	width := 500
 	height := 300
 

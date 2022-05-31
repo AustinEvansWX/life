@@ -1,4 +1,4 @@
-package neat
+package galg
 
 import (
 	"life/internal/utils"

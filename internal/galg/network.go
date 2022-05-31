@@ -1,4 +1,4 @@
-package neat
+package galg
 
 type Network struct {
 	Input    int
