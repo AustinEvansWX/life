@@ -15,14 +15,14 @@ func main() {
 
 	population := galg.Population{
 		PopulationSize:  200,
-		GenomeSize:      32,
+		GenomeSize:      6,
 		GenerationSteps: 100,
 		Goal:            utils.RandFloat(0.0, 1.0),
 		//Goal:         0.85,
-		MutationRate: 0.03,
+		MutationRate: 0.00,
 		Network: galg.Network{
-			Input:    1,
-			Internal: 6,
+			Input:    2,
+			Internal: 1,
 			Output:   2,
 		},
 	}

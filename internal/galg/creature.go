@@ -6,10 +6,16 @@ type Creature struct {
 	Genome   Genome
 }
 
-func (c *Creature) GetInputs() []float64 {
+func (c *Creature) GetInputs(goal float64) []float64 {
 	inputs := []float64{}
 
-	inputs = append(inputs, c.Position)
+	if goal < c.Position {
+		inputs = append(inputs, 1)
+		inputs = append(inputs, 0)
+	} else {
+		inputs = append(inputs, 0)
+		inputs = append(inputs, 1)
+	}
 
 	return inputs
 }

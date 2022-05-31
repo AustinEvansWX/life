@@ -32,7 +32,7 @@ func (p *Population) Spawn() {
 func (p *Population) RunGeneration() {
 	for i := 0; i < p.GenerationSteps; i++ {
 		for _, creature := range p.Creatures {
-			inputs := creature.GetInputs()
+			inputs := creature.GetInputs(p.Goal)
 
 			internal := make([]float64, p.Network.Internal)
 
@@ -72,9 +72,9 @@ func (p *Population) RunGeneration() {
 				if rand <= val {
 					switch i {
 					case 0:
-						creature.Position = math.Max(0.0, creature.Position-0.05)
+						creature.Position = math.Max(0.0, creature.Position-0.01)
 					case 1:
-						creature.Position = math.Min(1.0, creature.Position+0.05)
+						creature.Position = math.Min(1.0, creature.Position+0.01)
 					}
 				}
 			}
