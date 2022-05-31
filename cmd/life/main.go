@@ -50,6 +50,7 @@ func main() {
 		frames = append(frames, renderer.CreateFrame(population))
 
 		population.Reproduce()
+		population.Goal = utils.RandFloat(0.0, 1.0)
 
 		generation++
 	}
